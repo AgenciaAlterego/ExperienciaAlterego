@@ -1,12 +1,135 @@
-body{
+/* 
+Paleta de colores
+
+{
+    --aecolor-negro: #000000;
+    --aecolor-gris-oscuro: #333333;
+    --aecolor-gris-intermedio: #999999;
+    --aecolor-gris-claro: #CCCCCC;
+    --aecolor-blanco: #FFFFFF;
+    --aecolor-rojo: #F2333A;
+    --aecolor-CURRENT-MAIN-COLOR
+}
+
+son variables. Se llaman con la fución var().
+Ej: 
+background-color: var(aecolor-rojo);
+
+
+en el caso de --aecolor-CURRENT-MAIN-COLOR es una variable
+para ir actualizando a medida que se cambia de sección,
+y que todo tenga el mismo color base (principalmente para textos)
+
+*/
+
+/*
+Fonts utilizables:
+    'Baron_neue_regular'
+    'Gotham-Thin'
+    'Gotham-Light'
+    'Gotham-Medium'
+    'Gotham-Book'
+    'Gotham-Bold'
+    'Gotham-Black'
+    'Gotham-Ultra'
+    'Roboto'
+        300
+        400
+        700
+
+
+
+
+
+
+*/
+
+/*
+Iconpack - fontAwesome
+https://fontawesome.com/
+
+como usar:
+<i class="fas fa-camera"></i>
+la clase puede ser:
+- fas= para estilo "sólido"
+- fab= para marcas / brands
+
+fa-camera
+"fa" es prefijo de fontawesome. Para todos los íconos es el mismo
+"camera" es el ícono seleccionado, es lo que hay qeu cambiar
+
+
+acá se pueden encontrar todos los íconos gratuitos:
+https://fontawesome.com/icons?d=gallery&s=solid&m=free
+
+
+*/
+
+/*
+*****************************************************************************
+Definiciones generales
+*****************************************************************************
+*/
+
+
+body {
     padding: 0;
     margin: 0;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
-    background-color: dimgray;
+    background-color: var(--aecolor-negro);
 }
 
-h1{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+a {
+    text-decoration: none;
+    color: var(--aecolor-CURRENT-MAIN-COLOR);
+}
+
+main{
+    font-family: 'Gotham-Black', sans-serif !important;
+    color: var(--aecolor-gris-oscuro);
+}
+
+
+.titulo-estacion{
+    position: fixed;
+    left: 5vw;
+    font-size: 6em;
+    text-transform: uppercase;
+    line-height: 150px;
+}
+
+
+/*
+*****************************************************************************
+Header
+*****************************************************************************
+*/
+
+header {
+    height: 8vh;
+    width: 100%;
+    padding: 3vh 0;
+}
+
+header img {
+    height: 100%;
+    margin-left: 10vw;
+}
+
+header a {
+    position: absolute;
+    right: 10vw;
+}
+
+
+/*
+*****************************************************************************
+Secciones
+*****************************************************************************
+*/
+
+#estacion3d {
+    width: 100%;
+    height: 100%;
 }
