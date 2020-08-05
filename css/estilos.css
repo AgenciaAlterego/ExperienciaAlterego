@@ -163,6 +163,11 @@ barrita lateral
 
 }
 
+#sliderlateral .active span{
+    background-color: var(--aecolor-CURRENT-MAIN-COLOR);
+    width: 75%;
+}
+
 /*
 *****************************************************************************
 Secciones
