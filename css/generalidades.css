@@ -76,3 +76,7 @@ Definiciones generales
 .hidden{
     display: none;
 }
+
+p, a{
+    font-family: 'Roboto', sans-serif;
+}
