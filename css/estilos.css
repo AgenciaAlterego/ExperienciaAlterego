@@ -139,7 +139,7 @@ barrita lateral
 
 #sliderlateral a{
     display: block;
-    //height: 50px;
+    /*height: 50px;*/
     width: 100%;
     text-align: right;   
     line-height: 25px;
