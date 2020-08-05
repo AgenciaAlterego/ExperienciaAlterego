@@ -85,13 +85,13 @@ a {
     color: var(--aecolor-CURRENT-MAIN-COLOR);
 }
 
-main{
+main {
     font-family: 'Gotham-Black', sans-serif !important;
     color: var(--aecolor-gris-oscuro);
 }
 
 
-.titulo-estacion{
+.titulo-estacion {
     position: fixed;
     left: 5vw;
     font-size: 6em;
@@ -122,6 +122,46 @@ header a {
     right: 10vw;
 }
 
+
+/*
+*****************************************************************************
+barrita lateral
+*****************************************************************************
+*/
+#sliderlateral {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    width: 100px;
+    height: 10px;
+    text-align: right;
+}
+
+#sliderlateral a{
+    display: block;
+    //height: 50px;
+    width: 100%;
+    text-align: right;   
+    line-height: 25px;
+}
+
+
+#sliderlateral span {
+    transition-duration: 0.3s;
+    display: inline-block;
+    width: 50%;
+    height: 2px;
+    background-color: var(--aecolor-gris-oscuro);
+    vertical-align: middle;
+
+}
+
+#sliderlateral a:hover span {
+    transition-duration: 0.3s;
+    width: 100%;
+    background-color: var(--aecolor-rojo);
+
+}
 
 /*
 *****************************************************************************
