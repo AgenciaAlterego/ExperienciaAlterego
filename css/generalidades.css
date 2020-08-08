@@ -95,13 +95,15 @@ body {
     margin: 0;
     padding: 0;
     background-image: url(../imgs/noisy_net/noisy_net_@2X.png);
+    background-repeat: repeat-x repeat-y;
     height: 300%;
     width: 300%;
     background-color: transparent;
     mix-blend-mode: screen;
     position: fixed;
-
-    animation: grainMovement 8s steps(10) infinite;
+    left: -50%;
+    top: -100%;
+    animation: grainMovement 15s steps(10) infinite;
 
     /*
     opacity: 0.3;

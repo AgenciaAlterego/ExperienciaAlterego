@@ -18,52 +18,73 @@
 
 <body>
     <div id="backgroundSupport">
-        <header>
-            <img src="./imgs/MARCA_AE-Principal.svg" alt="Isologotipo Álterego">
-            <a href="#menuhamburguesa"><i class="fas fa-bars"></i></a>
-            <!-- <img src="" alt="Icono menú hamburguesa"> -->
-        </header>
+    </div>
+    <header>
+        <img src="./imgs/MARCA_AE-Principal.svg" alt="Isologotipo Álterego">
+        <a href="#menuhamburguesa"><i class="fas fa-bars"></i></a>
+        <!-- <img src="" alt="Icono menú hamburguesa"> -->
+    </header>
 
 
 
 
-        <aside id="menuhamburguesa" class="hidden">
-            <h1>Bienvenido!</h1>
-            <img src="" alt="perfil usuario actual">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos beatae harum sed aliquid id nemo ab
-                nam
-                minus soluta at rerum sint, debitis provident aperiam neque. Saepe esse vel magnam.</p>
-        </aside>
+    <aside id="menuhamburguesa" class="hidden">
+        <h1>Bienvenido!</h1>
+        <img src="" alt="perfil usuario actual">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos beatae harum sed aliquid id nemo ab
+            nam
+            minus soluta at rerum sint, debitis provident aperiam neque. Saepe esse vel magnam.</p>
+    </aside>
 
-        <section id="sliderlateral">
-            <a href="#"><span></span>
-                <p>Estación</p>
-            </a>
-            <a href="#"><span></span>
-                <p>Estación</p>
-            </a>
-            <a href="#"><span></span>
-                <p>Estación </p>
-            </a>
-            <a href="#" class="active"><span></span>
-                <p>Estación 3D</p>
-            </a>
+    <section id="sliderlateral">
+        <a href="#" id="indicadorEstacionManifiesto"><span></span>
+            <p>Estación #6 <br>Manifiesto y Reel</p>
+        </a>
+        <a href="#" id="indicadorEstacionCampana"><span></span>
+            <p>Estación #5 <br>Campaña<br>Publicitaria</p>
+        </a>
+        <a href="#" id="indicadorEstacionWeb"><span></span>
+            <p>Estación #4 <br>Webs, Aplicaciones<br>y Juegos</p>
+        </a>
+        <a href="#" id="indicadorEstacionDiseno"><span></span>
+            <p>Estación #3 <br>Diseño<br>e Ilustración</p>
+        </a>
+        <a href="#" id="indicadorEstacionPostprod"><span></span>
+            <p>Estación #2 <br>Postproducción y Motion</p>
+        </a>
+        <a href="#" class="active" id="indicadorEstacion3d"><span></span>
+            <p>Estación #1<br>3D</p>
+        </a>
+    </section>
+
+
+    <main>
+        <section id="estacion3d" class="estacion">
+            <h1 class="titulo-estacion">Estación #1 <br> 3D</h1>
+            <a href=""><i class="fas fa-chevron-right"></i></a>
+        </section>
+        <section id="estacionPostprod" class="hidden estacion">
+            <h1 class="titulo-estacion">Estación #2 <br>Postproducción<br>y Motion Gráphics</h1>
+        </section>
+        <section id="estacionDiseno" class="hidden estacion">
+            <h1 class="titulo-estacion">Estación #3 <br>Diseño<br>e Ilustración</h1>
+        </section>
+        <section id="estacionWeb" class="hidden estacion">
+            <h1 class="titulo-estacion">Estación #4 <br>Webs, Aplicaciones<br>y Juegos</h1>
+        </section>
+        <section id="estacionCampana" class="hidden estacion">
+            <h1 class="titulo-estacion">Estación #5 <br>Campaña<br>Publicitaria</h1>
+        </section>
+        <section id="estacionManifiesto" class="hidden estacion">
+            <h1 class="titulo-estacion">Estación #6 <br>Manifiesto y Reel</h1>
         </section>
 
 
-        <main>
-            <section id="estacion3d">
-                <h1 class="titulo-estacion">Estación #1 <br> 3D</h1>
-            </section>
 
-            <section id="estacionmotion" class="hidden">
-                <h1 class="titulo-estacion">Estación #2 <br> Motion Gráphics</h1>
-            </section>
+    </main>
 
+<script src="js/codigo.js"></script>
 
-
-        </main>
-    </div>
 </body>
 
 </html>
