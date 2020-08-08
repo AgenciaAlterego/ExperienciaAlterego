@@ -66,6 +66,25 @@ html {
     --aecolor-CURRENT-MAIN-COLOR: #FFFFFF;
 }
 
+.BackgroundAecolorNegro{
+    background-color: var(--aecolor-negro);
+}
+.BackgroundAecolorGrisOscuro{
+    background-color: var(--aecolor-gris-oscuro);
+}
+.BackgroundAecolorGrisIntermedio{
+    background-color: var(--aecolor-gris-intermedio);
+}
+.BackgroundAecolorGrisIntermedio{
+    background-color: var(--aecolor-gris-claro);
+}
+.BackgroundAecolorBlanco{
+    background-color: var(--aecolor-blanco);
+}
+.BackgroundAecolorRojo{
+    background-color: var(--aecolor-rojo);
+}
+
 
 /*
 *****************************************************************************
@@ -88,14 +107,13 @@ body {
     margin: 0;
     width: 100%;
     height: 100vh;
-    background-color: var(--aecolor-negro);
 }
 
 #backgroundSupport {
     margin: 0;
     padding: 0;
     background-image: url(../imgs/noisy_net/noisy_net_@2X.png);
-    background-repeat: repeat-x repeat-y;
+    /*background-repeat: repeat-x repeat-y;*/
     height: 300%;
     width: 300%;
     background-color: transparent;
@@ -103,7 +121,8 @@ body {
     position: fixed;
     left: -50%;
     top: -100%;
-    animation: grainMovement 15s steps(10) infinite;
+    z-index: -50;
+    animation: grainMovement 10s steps(10) infinite;
 
     /*
     opacity: 0.3;
