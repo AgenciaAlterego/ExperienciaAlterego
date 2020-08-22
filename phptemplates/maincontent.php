@@ -2,13 +2,13 @@
 
 <?php if(isset($_SESSION['errores'])){?>
 <div id="errores">
-    <p><? var_dump($_SESSION['errores']);
+    <p><?php var_dump($_SESSION['errores']);
     ?></p>
 </div>
-<?
+<?php
 }?>
 
-<? if (!isset($_SESSION['datos_usuario'])){
+<?php if (!isset($_SESSION['datos_usuario'])){
     // si entra acá quiere decir que no está logueado (osea, no hay data en la sesión)
 ?>
 
@@ -26,7 +26,7 @@
         </section>
 
 
-<?
+<?php
 }?>
 
 
