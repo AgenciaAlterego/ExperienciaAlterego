@@ -19,9 +19,9 @@
     <article id="login">               
         <form action="../phpfunctions/login.php" method="POST">
             <!--<label for="username">Correo electrónico</label> -->
-            <input type="email" name="username" id="username" placeholder="Correo">
+            <input type="email" name="username" id="username" placeholder="Correo" required>
             <!--<label for="password">Contraseña</label> -->
-            <input type="password" name="password" id="password" placeholder="Contraseña">
+            <input type="password" name="password" id="password" placeholder="Contraseña" required>
             <button type="submit">Entrar</button>
         </form>    
     </article>
