@@ -1,6 +1,6 @@
 
 
-<?php if(isset($_SESSION['errores'])){?>
+<?php if (isset($_SESSION['errores'])) {?>
 <div id="errores">
     <p><?php var_dump($_SESSION['errores']);
     ?></p>
@@ -8,24 +8,27 @@
 <?php
 }?>
 
-<?php if (!isset($_SESSION['datos_usuario'])){
+<?php if (!isset($_SESSION['datos_usuario'])) {
     // si entra acá quiere decir que no está logueado (osea, no hay data en la sesión)
-?>
+    ?>
 
-<section id="login">
-            <h1 class="titulo-login-primeralinea">Te damos la bienvenida a</h1>
-            <h1 class="titulo-login-segundalinea">Experiencia Álterego</h1>
+<section id="sectionLogin" class="AecolorBlanco">
+    <h1 class="titulo-login-primeralinea">Te damos la bienvenida a</br>
+    <strong class="titulo-login-segundalinea">Experiencia Álterego</strong></h1>
 
-            <form action="../phpfunctions/login.php" method="POST">
-            <label for="username">Correo electrónico</label>
-            <input type="email" name="username" id="">
-            <label for="password">Contraseña</label>
-            <input type="password" name="password" id="">
-            <button type="submit"></button>
-        </form>
-        </section>
+    <article id="login">               
+        <form action="../phpfunctions/login.php" method="POST">
+            <!--<label for="username">Correo electrónico</label> -->
+            <input type="email" name="username" id="username" placeholder="Correo">
+            <!--<label for="password">Contraseña</label> -->
+            <input type="password" name="password" id="password" placeholder="Contraseña">
+            <button type="submit">Entrar</button>
+        </form>    
+    </article>
+    <article id="registrar">
 
-
+    </article>
+</section>
 <?php
 }?>
 

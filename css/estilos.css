@@ -20,6 +20,31 @@ en el caso de --aecolor-CURRENT-MAIN-COLOR es una variable
 para ir actualizando a medida que se cambia de sección,
 y que todo tenga el mismo color base (principalmente para textos)
 
+******************************************************************
+
+Se aconseja usar las clases:
+
++ Para fondos:
+.BackgroundAecolorNegro
+.BackgroundAecolorGrisOscuro
+.BackgroundAecolorGrisIntermedio
+.BackgroundAecolorGrisClaro
+.BackgroundAecolorBlanco
+.BackgroundAecolorRojo
+
++ Para Color:
+.AecolorNegro
+.AecolorGrisOscuro
+.AecolorGrisIntermedio
+.AecolorGrisClaro
+.AecolorBlanco
+.AecolorRojo
+
+
+
+******************************************************************
+
+
 */
 
 /*
@@ -36,9 +61,13 @@ Fonts utilizables:
         300
         400
         700
-
-
-
+    'Barlow-Thin'
+    'Barlow-ThinItalic'
+    'Barlow-Light'
+    'Barlow-Regular'
+    'Barlow-Medium'
+    'Barlow-Medium-italic'
+    'Barlow-Bold'
 
 
 
@@ -80,8 +109,9 @@ Definiciones generales
 }
 
 
-#login .titulo-login-primeralinea, #login .titulo-login-segundalinea{
-    text-transform: capitalize;
+#sectionLogin .titulo-login-primeralinea,
+#sectionLogin .titulo-login-segundalinea {
+    text-transform: uppercase;
 }
 
 
@@ -116,13 +146,13 @@ Header
 *****************************************************************************
 */
 
-footer{
+footer {
     background: none;
     width: 100%;
     padding: 3vh 0;
     position: fixed;
     bottom: 0;
-    right: -3vw;
+    right: -5vw;
     color: var(--aecolor-gris-intermedio);
 }
 
@@ -202,12 +232,70 @@ Secciones
 *****************************************************************************
 */
 
-.estacion, #login {
+.estacion {
     width: 100%;
     height: 100%;
 }
 
-.estacion a{
+#sectionLogin {
+    padding-left: 20vw;
+}
+
+#sectionLogin #login {
+    width: 100%;
+    margin-top: 5em;
+}
+
+#sectionLogin h1 {
+    font-family: 'Barlow-Thin' !important;
+}
+
+#sectionLogin h1 strong {
+    font-size: 2em;
+    font-family: 'Barlow-Bold';
+}
+
+#sectionLogin form input {
+    margin-bottom: 2em;
+    display: block;
+    height: 2em;
+    width: 40%;
+    background-color: transparent;
+    text-decoration-color: var(--aecolor-blanco);
+    color: var(--aecolor-blanco);
+    border: none;
+    border-bottom: 1px solid var(--aecolor-gris-intermedio);
+}
+
+#sectionLogin form input::placeholder {
+    color: var(--aecolor-gris-claro);
+    font-family: 'Barlow-ThinItalic';
+}
+
+#sectionLogin form input:focus {
+    /*border: none !important;*/
+    outline: none !important;
+}
+
+#sectionLogin form button {
+    font-family: 'Barlow-Medium';
+    font-size: 1.1em;
+    padding: 5px 20px;
+    color: var(--aecolor-blanco);
+    background-color: var(--aecolor-negro);
+    text-transform: uppercase;
+    border: none;
+}
+
+#sectionLogin form button:focus {
+    transition: 0.5s;
+    background-color: var(--aecolor-gris-oscuro);
+    outline: none !important;
+    border-radius: 0;
+    /*border: 3px solid var(--aecolor-gris-oscuro);*/
+}
+
+.estacion a {
     /*width: 10px;*/
     height: 10px;
     position: fixed;
@@ -218,10 +306,10 @@ Secciones
     border-radius: 50%;
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 1);
     transform: scale(1);
-	animation: pulse 2s infinite;
+    animation: pulse 2s infinite;
 }
 
-.estacion a i{
+.estacion a i {
     position: relative;
     bottom: 40%;
     left: 20%;
