@@ -1,13 +1,4 @@
 
-
-<?php if (isset($_SESSION['errores'])) {?>
-<div id="errores">
-    <p><?php var_dump($_SESSION['errores']);
-    ?></p>
-</div>
-<?php
-}?>
-
 <?php if (!isset($_SESSION['datos_usuario'])) {
     // si entra acá quiere decir que no está logueado (osea, no hay data en la sesión)
     ?>
@@ -17,7 +8,7 @@
     <strong class="titulo-login-segundalinea">Experiencia Álterego</strong></h1>
 
     <article id="login">               
-        <form action="../phpfunctions/login.php" method="POST">
+        <form action="./phpfunctions/login.php" method="POST">
             <!--<label for="username">Correo electrónico</label> -->
             <input type="email" name="username" id="username" placeholder="Correo" required>
             <!--<label for="password">Contraseña</label> -->
@@ -30,11 +21,10 @@
     </article>
 </section>
 <?php
-}?>
-
-
-
-<section id="estacion3d" class="estacion hidden">
+}else{
+    // si entra acá quiere decir que hay data en la sesión, y que el user está logeado
+    ?>
+<section id="estacion3d" class="estacion AecolorGrisClaro">
             <h1 class="titulo-estacion">Estación #1 <br> 3D</h1>
             <a href="#" id="next-titulo-estacion-3d"><i class="fas fa-chevron-right"></i></a>
         </section>
@@ -58,3 +48,8 @@
             <h1 class="titulo-estacion">Estación #6 <br>Manifiesto y Reel</h1>
             <a href="#"><i class="fas fa-chevron-right"></i></a>
         </section>
+
+<?php
+}
+?>
+

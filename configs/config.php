@@ -1,5 +1,8 @@
 <?php
+session_start();
 $local = true;
+
+$errores = array();
 
 if ($local){
     $serverip = 'localhost';

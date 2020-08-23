@@ -20,7 +20,7 @@ en el caso de --aecolor-CURRENT-MAIN-COLOR es una variable
 para ir actualizando a medida que se cambia de sección,
 y que todo tenga el mismo color base (principalmente para textos)
 
-******************************************************************
+********
 
 Se aconseja usar las clases:
 
@@ -40,6 +40,25 @@ Se aconseja usar las clases:
 .AecolorBlanco
 .AecolorRojo
 
+
+********
+
+Adicionalmente, se cuenta con clases para colorear por tipo de mensaje:
+
+.info{
+    color: skyblue;
+}
+.success{
+    color: greenyellow;
+}
+.warning {
+    color: orange;
+}
+.error{
+    color: orangered;
+}
+
+(estas clases ya están definidas, se pueden usar directamente)
 
 
 ******************************************************************
@@ -142,7 +161,7 @@ header a {
 
 /*
 *****************************************************************************
-Header
+Footer
 *****************************************************************************
 */
 
@@ -156,6 +175,73 @@ footer {
     color: var(--aecolor-gris-intermedio);
 }
 
+
+/*
+*****************************************************************************
+Aside
+*****************************************************************************
+*/
+
+#asidebackground{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--aecolor-gris-oscuro);
+    opacity: 0.3;
+    z-index: 3;
+    animation: animShowBackground 1s ease;
+}
+
+#aside{
+    width: 30vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    text-align: center;
+    z-index: 3;
+    padding-top: 10vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    border-left: 1px solid var(--aecolor-gris-claro);
+    animation: animShow 1s ease;
+}
+
+#aside a{
+        /*width: 10px;*/
+        height: 10px;
+        position: fixed;
+        top: 3vh;
+        right: 5vw;
+        padding: 10px;
+        /*background-color: var(--aecolor-gris-oscuro);
+        border-radius: 50%;
+        box-shadow: 0 0 5px 1px rgba(255, 255, 255, 1);*/
+        /*transform: scale(1);
+        animation: pulse 2s infinite;*/
+}
+
+#aside form button{
+    font-family: 'Barlow-Medium';
+    font-size: 1.1em;
+    padding: 5px 20px;
+    color: var(--aecolor-blanco);
+    background-color: var(--aecolor-negro);
+    text-transform: uppercase;
+    border: none;
+}
+
+#aside form button:focus{
+    transition: 0.5s;
+    background-color: var(--aecolor-gris-oscuro);
+    outline: none !important;
+    border-radius: 0;
+
+}
 
 /*
 *****************************************************************************
@@ -238,7 +324,8 @@ Secciones
 }
 
 #sectionLogin {
-    padding-left: 20vw;
+    padding-left: 10vw;
+    padding-top: 10vh;
 }
 
 #sectionLogin #login {

@@ -158,6 +158,9 @@ Definiciones generales
 */
 
 .hidden {
+    /*
+    No funca
+    animation: animHide 1s ease;*/
     display: none;
 }
 /*
@@ -182,8 +185,8 @@ body {
     /*background-repeat: repeat-x repeat-y;*/
     height: 300%;
     width: 300%;
-    background-color: transparent;
-    mix-blend-mode: screen;
+    /*background-color: transparent;*/
+    background-blend-mode: screen;
     position: fixed;
     left: -50%;
     top: -100%;
@@ -206,4 +209,27 @@ main, footer, header, p, a{
     /*color: var(--aecolor-gris-oscuro);*/
 }
 
+.errores{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 5vw;
+    margin-bottom: 3vh;
+    animation: animShow 1s;
+    z-index: 2;
+    width: 40%;
+    text-align: right;
+}
 
+.info{
+    color: skyblue;
+}
+.success{
+    color: greenyellow;
+}
+.warning {
+    color: orange;
+}
+.error{
+    color: orangered;
+}

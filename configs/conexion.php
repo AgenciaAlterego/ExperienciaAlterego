@@ -1,6 +1,7 @@
 <?php
 
-require 'sconfig.php';
+
+require 'config.php';
 
 
 $conexion = mysqli_connect($serverip, $serverusr, $serverpass, 'alterego-experiencia');
@@ -12,7 +13,7 @@ if (!$conexion){
     exit;
 }
 
-echo "Éxito: Se realizó una conexión apropiada a MySQL! La base de datos mi_bd es genial." . PHP_EOL;
+echo "Éxito en la conexión a la DB" . PHP_EOL;
 echo "Información del host: " . mysqli_get_host_info($conexion) . PHP_EOL;
 
 ?>
