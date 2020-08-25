@@ -4,7 +4,7 @@
 require 'config.php';
 
 
-$conexion = mysqli_connect($serverip, $serverusr, $serverpass, 'alterego-experiencia');
+$conexion = mysqli_connect($serverip, $serverusr, $serverpass, $db);
 
 if (!$conexion){
     echo "Error: No se pudo conectar a MySQL." . PHP_EOL;
