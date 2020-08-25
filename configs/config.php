@@ -1,13 +1,17 @@
 <?php
 session_start();
-$local = true;
+$ambiente = 'lab';
 
 $errores = array();
 
-if ($local){
+if ($ambiente = 'local'){
     $serverip = 'localhost';
     $serverusr = 'root';
     $serverpass = '';
-} elseif (!$local) {
+} elseif ($ambiente = 'lab') {
+    $serverip = 'freedb.tech:3306';
+    $serverusr = 'freedb_alterego';
+    $serverpass = 'AmeScuffiVallaro';
+}elseif ($ambiente = 'prod'){
     # code...
 }
