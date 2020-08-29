@@ -22,7 +22,12 @@ if ($ambiente == 'local'){
     $serverusr = $url["user"];
     $serverpass = $url["pass"];
     $db = substr($url["path"], 1);
+    console_log($url);
     console_log($serverip);
+    console_log($serverusr);
+    console_log($serverpass);
+    console_log($db);
+
 /*
     $serverip = 'https://freedb.tech:3306';
     $serverusr = 'freedb_alterego';
