@@ -14,7 +14,18 @@ if ($ambiente == 'local'){
     $serverusr = 'root';
     $serverpass = '';
     $db = 'alterego-experiencia';
-    console_log($serverip);
+
+    /*
+    $serverip = 'freedb.tech:3306';
+    $serverusr = 'freedb_alterego';
+    $serverpass = 'AmeScuffiVallaro';
+    $db = 'freedb_dbtst';
+
+    console_log('server: ' . $serverip);
+    console_log('usuario: ' . $serverusr);
+    console_log('pass: ' . $serverpass);
+    console_log('db: ' . $db);
+*/
 
 } elseif ($ambiente == 'lab') {
     $url = parse_url(getenv("DATABASE_URL"));
@@ -34,6 +45,6 @@ if ($ambiente == 'local'){
     $serverpass = 'AmeScuffiVallaro';
     $db = 'freedb_dbtst';
   
-*/}elseif ($ambiente = 'prod'){
+*/}elseif ($ambiente == 'prod'){
     # code...
 }
