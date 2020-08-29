@@ -1,8 +1,6 @@
 <?php
 
-
 require 'config.php';
-
 
 $conexion = mysqli_connect($serverip, $serverusr, $serverpass, $db);
 
