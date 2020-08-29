@@ -9,14 +9,14 @@ console_log($ambiente);
 console_log('Encontré env? ' . getenv("AMBIENTE"));
 
 
-if ($ambiente = 'local'){
+if ($ambiente == 'local'){
     $serverip = 'localhost';
     $serverusr = 'root';
     $serverpass = '';
     $db = 'alterego-experiencia';
     console_log($serverip);
 
-} elseif ($ambiente = 'lab') {
+} elseif ($ambiente == 'lab') {
     $url = parse_url(getenv("DATABASE_URL"));
     $serverip = $url["host"];;
     $serverusr = $url["user"];
