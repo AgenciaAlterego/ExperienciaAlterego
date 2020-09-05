@@ -19,15 +19,13 @@ if ($ambiente == 'local'){
 } elseif ($ambiente == 'lab') {
     $url = parse_url(getenv("DATABASE_URL"));
     $serverip = 'freedb.tech:3306';
-    $serverusr = 'freedb_alterego';
-    $serverpass = 'AmeScuffiVallaro';
-    $db = 'freedb_dbtst';
-    
-    /*
-    $serverip =  $url["host"] . ":" . $url["port"];
     $serverusr = $url["user"];
     $serverpass = $url["pass"];
-    $db = substr($url["path"], 1);*/
+    $db = substr($url["path"], 1);
+        
+    /*
+    $serverip =  $url["host"] . ":" . $url["port"];
+*/
     console_log($url);
     console_log('server: ' . $serverip);
     console_log('usuario: ' . $serverusr);
