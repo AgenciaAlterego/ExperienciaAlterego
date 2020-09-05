@@ -15,24 +15,19 @@ if ($ambiente == 'local'){
     $serverpass = '';
     $db = 'alterego-experiencia';
 
-    /*
-    $serverip = 'freedb.tech:3306';
-    $serverusr = 'freedb_alterego';
-    $serverpass = 'AmeScuffiVallaro';
-    $db = 'freedb_dbtst';
-
-    console_log('server: ' . $serverip);
-    console_log('usuario: ' . $serverusr);
-    console_log('pass: ' . $serverpass);
-    console_log('db: ' . $db);
-*/
 
 } elseif ($ambiente == 'lab') {
     $url = parse_url(getenv("DATABASE_URL"));
-    $serverip = $url["host"] . ":" . $url["port"];
+    $serverip = 'https://freedb.tech:3306';
+    $serverusr = 'freedb_alterego';
+    $serverpass = 'AmeScuffiVallaro';
+    $db = 'freedb_dbtst';
+    
+    /*
+    $serverip =  $url["host"] . ":" . $url["port"];
     $serverusr = $url["user"];
     $serverpass = $url["pass"];
-    $db = substr($url["path"], 1);
+    $db = substr($url["path"], 1);*/
     console_log($url);
     console_log('server: ' . $serverip);
     console_log('usuario: ' . $serverusr);
@@ -48,3 +43,23 @@ if ($ambiente == 'local'){
 */}elseif ($ambiente == 'prod'){
     # code...
 }
+
+
+/*
+BORRAR ESTA MIERDA:
+
+En 000webhost
+    $db = 'id14790087_alterego_experiencia';
+    $serverusr = 'webhost_alterego';
+    $serverpass = 'AmeScuffiVallaro1!';
+
+
+
+En Freedb.Tech:
+    $serverip = 'freedb.tech:3306';
+    $serverusr = 'freedb_alterego';
+    $serverpass = 'AmeScuffiVallaro';
+    $db = 'freedb_dbtst';
+
+
+*/
