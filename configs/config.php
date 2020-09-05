@@ -18,7 +18,7 @@ if ($ambiente == 'local'){
 
 } elseif ($ambiente == 'lab') {
     $url = parse_url(getenv("DATABASE_URL"));
-    $serverip = 'http://freedb.tech:3306';
+    $serverip = 'freedb.tech:3306';
     $serverusr = 'freedb_alterego';
     $serverpass = 'AmeScuffiVallaro';
     $db = 'freedb_dbtst';
