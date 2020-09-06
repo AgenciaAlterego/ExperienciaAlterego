@@ -31,8 +31,9 @@ Ver que hacer y donde dejar esto
 <?php if (isset($_SESSION['errores'])) {
     if(count($_SESSION["errores"]) != 0){?>
     <!-- <p><?php var_dump($_SESSION["errores"]);?></p> -->
-        <?php foreach ($_SESSION["errores"] as $valor){ ?>
-            <p class="error"><?php echo "$valor";?></p>
+        <?php foreach ($_SESSION["errores"] as $valor){ 
+            ?>
+            <p class="error"><?php echo $valor;?></p>
         <?php
     }}
 }
@@ -47,6 +48,8 @@ include './phptemplates/asidemenuhamburguesa.php';
 include './phptemplates/siderlateral.php';
 
 echo '<main>';
+
+
 
 
 require './phptemplates/maincontent.php';
