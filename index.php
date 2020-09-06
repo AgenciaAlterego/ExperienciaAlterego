@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="./css/keyframing.css">
     <link rel="stylesheet" href="./css/generalidades.css">
     <link rel="stylesheet" href="./css/estilos.css">
-    
-    <?php require './configs/config.php';?>
+
+    <?php require './configs/config.php'; ?>
 
     <script src="https://kit.fontawesome.com/635234d3c3.js" crossorigin="anonymous"></script>
 
@@ -20,51 +20,67 @@
 <body id="body">
     <div id="backgroundSupport" class="BackgroundAecolorNegro">
     </div>
-    
-<!-- 
+
+    <!-- 
 ****************************************
 Ver que hacer y donde dejar esto
 (mensajes de error)
 ****************************************
  -->
     <div class="errores">
-<?php if (isset($_SESSION['errores'])) {
-    if(count($_SESSION["errores"]) != 0){?>
-    <!-- <p><?php var_dump($_SESSION["errores"]);?></p> -->
-        <?php foreach ($_SESSION["errores"] as $valor){ 
-            ?>
-            <p class="error"><?php echo $valor;?></p>
-        <?php
-    }}
-}
-?>
+        <?php if (isset($_SESSION['errores'])) {
+            if (count($_SESSION["errores"]) != 0) { ?>
+                <!-- <p><?php var_dump($_SESSION["errores"]); ?></p> -->
+                <?php foreach ($_SESSION["errores"] as $valor) {
+
+                    // Chequeo a ver si el registro dentro del arrary errores es un array por si mismo
+                    // entonces, tengo que hacer otro recorrido
+                    if (!count($valor)) {
+                        // quiere decir que hay otro array acá adentro
+
+                        foreach ($valor as $valorInterno) {
+                        ?>
+                            <p class="error"><?php echo $valorInterno; ?></p>
+                        <?php
+                        }
+                    }else{
+                        // no hubo array interno, es error unitario
+                        ?>
+                        <p class="error"><?php echo $valor; ?></p>
+                        <?php
+                    
+                    }
+                }
+            }
+        }
+        ?>
     </div>
 
 
-<?php
-include './phptemplates/header.php';
-include './phptemplates/asidemenuhamburguesa.php';
+    <?php
+    include './phptemplates/header.php';
+    include './phptemplates/asidemenuhamburguesa.php';
 
-include './phptemplates/siderlateral.php';
+    include './phptemplates/siderlateral.php';
 
-echo '<main>';
-
-
-
-
-require './phptemplates/maincontent.php';
+    echo '<main>';
 
 
 
 
-echo '</main>';
-
-include './phptemplates/footer.php';
-?>
+    require './phptemplates/maincontent.php';
 
 
-<script src="js/vars.js"></script>
-<script src="js/codigo.js"></script>
+
+
+    echo '</main>';
+
+    include './phptemplates/footer.php';
+    ?>
+
+
+    <script src="js/vars.js"></script>
+    <script src="js/codigo.js"></script>
 
 </body>
 
