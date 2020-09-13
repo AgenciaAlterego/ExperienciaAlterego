@@ -39,3 +39,9 @@ if (asideCloseButton != null) {
         asidebackground.classList.toggle('hidden');
     });
 }
+
+
+function entrarAlLobby(){
+    document.getElementById('lobby-intro').classList.toggle('hidden');
+    document.getElementById('lobby-people').classList.toggle('hidden');
+}

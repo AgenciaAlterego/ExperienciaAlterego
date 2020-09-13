@@ -161,7 +161,7 @@ Definiciones generales
     /*
     No funca
     animation: animHide 1s ease;*/
-    display: none;
+    display: none !important;
 }
 /*
 p,
@@ -215,10 +215,14 @@ main, footer, header, p, a{
     right: 0;
     margin-right: 5vw;
     margin-bottom: 3vh;
+    padding: 0 10px;
     animation: animShow 1s;
-    z-index: 2;
+    z-index: 1;
     width: 40%;
     text-align: right;
+    height: 100px;
+    background-color: rgba(255,255,255,0.1);
+    overflow: auto;
 }
 
 .info{

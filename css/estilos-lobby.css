@@ -1,0 +1,182 @@
+/* 
+Paleta de colores
+
+{
+    --aecolor-negro: #000000;
+    --aecolor-gris-oscuro: #333333;
+    --aecolor-gris-intermedio: #999999;
+    --aecolor-gris-claro: #CCCCCC;
+    --aecolor-blanco: #FFFFFF;
+    --aecolor-rojo: #F2333A;
+    --aecolor-CURRENT-MAIN-COLOR
+}
+
+son variables. Se llaman con la fución var().
+Ej: 
+background-color: var(aecolor-rojo);
+
+
+en el caso de --aecolor-CURRENT-MAIN-COLOR es una variable
+para ir actualizando a medida que se cambia de sección,
+y que todo tenga el mismo color base (principalmente para textos)
+
+********
+
+Se aconseja usar las clases:
+
++ Para fondos:
+.BackgroundAecolorNegro
+.BackgroundAecolorGrisOscuro
+.BackgroundAecolorGrisIntermedio
+.BackgroundAecolorGrisClaro
+.BackgroundAecolorBlanco
+.BackgroundAecolorRojo
+
++ Para Color:
+.AecolorNegro
+.AecolorGrisOscuro
+.AecolorGrisIntermedio
+.AecolorGrisClaro
+.AecolorBlanco
+.AecolorRojo
+
+
+********
+
+Adicionalmente, se cuenta con clases para colorear por tipo de mensaje:
+
+.info{
+    color: skyblue;
+}
+.success{
+    color: greenyellow;
+}
+.warning {
+    color: orange;
+}
+.error{
+    color: orangered;
+}
+
+(estas clases ya están definidas, se pueden usar directamente)
+
+
+******************************************************************
+
+
+*/
+
+/*
+Fonts utilizables:
+    'Baron_neue_regular'
+    'Gotham-Thin'
+    'Gotham-Light'
+    'Gotham-Medium'
+    'Gotham-Book'
+    'Gotham-Bold'
+    'Gotham-Black'
+    'Gotham-Ultra'
+    'Roboto'
+        300
+        400
+        700
+    'Barlow-Thin'
+    'Barlow-ThinItalic'
+    'Barlow-Light'
+    'Barlow-Regular'
+    'Barlow-Medium'
+    'Barlow-Medium-italic'
+    'Barlow-Bold'
+
+
+
+*/
+
+/*
+Iconpack - fontAwesome
+https://fontawesome.com/
+
+como usar:
+<i class="fas fa-camera"></i>
+la clase puede ser:
+- fas= para estilo "sólido"
+- fab= para marcas / brands
+
+fa-camera
+"fa" es prefijo de fontawesome. Para todos los íconos es el mismo
+"camera" es el ícono seleccionado, es lo que hay qeu cambiar
+
+
+acá se pueden encontrar todos los íconos gratuitos:
+https://fontawesome.com/icons?d=gallery&s=solid&m=free
+
+
+*/
+
+#lobby-main{
+    margin: 0;
+
+    padding: 0;
+    text-align: center;
+    /*background-image: url(../imgs/isotipo_ae-white.svg);*/
+}
+
+#lobby-main::after{
+    content: '';
+    background: url(../imgs/isotipo_ae-white.svg);
+    opacity: 0.05;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+    background-repeat: no-repeat;
+}
+
+
+#lobby-main img{
+    width: 150px;
+}
+
+#lobby-main h1{
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+#lobby-intro{
+    margin: 50px auto;
+    /*
+    position: relative;
+    top: 10px;
+    left: 37.5%;*/
+    width: 30vw;
+    display: block;
+}
+
+#lobby-intro a{
+    margin-top: 50px;
+    padding: 5px;
+    border: 1px var(--aecolor-gris-intermedio);
+    border-style: solid none solid none;
+
+}
+
+#lobby-intro a p{
+    font-family: 'Barlow-Medium';
+    font-size: 0.8em;
+    padding: 5px 20px;
+    color: var(--aecolor-blanco);
+    background-color: var(--aecolor-gris-oscuro);
+    text-transform: uppercase;
+    border: none;
+    margin: 0;
+}
+
+
+
+#lobby-intro-ir-a-sala-de-espera{
+    width: 30vw;
+    display: block;
+}
+    
