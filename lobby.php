@@ -34,6 +34,8 @@ Ver que hacer y donde dejar esto
     include './phptemplates/asidemenuhamburguesa.php';
     include './phptemplates/siderlateral.php';
 
+
+    include './phpfunctions/getUsersinSession.php'
 ?>
 
     <main id="lobby-main">

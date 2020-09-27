@@ -35,7 +35,8 @@ Ver que hacer y donde dejar esto
     include './phptemplates/header.php';
     include './phptemplates/asidemenuhamburguesa.php';
 
-    include './phptemplates/siderlateral.php';
+ 
+    //include './phptemplates/siderlateral.php';
 
     echo '<main>';
 
